@@ -54,7 +54,7 @@ const JobBoard = () => {
   }
   if (error) {
     return (
-      <div className="w-full flex flex-col gap-2 justify-start items-start text-red-500">
+      <div className="w-[90%] md:w-full flex flex-col gap-2 justify-start items-start text-red-500">
         Somthing went Wrong
       </div>
     )
