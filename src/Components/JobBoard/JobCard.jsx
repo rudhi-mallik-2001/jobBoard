@@ -1,14 +1,14 @@
 
-const JobCard = () => {
+const JobCard = (job) => {
+  const {by,url,title,time}=job.jobDetails
   return (
     <div className="w-full p-2 flex flex-col border-2 rounded">
         <div>
-            <h2><a>hello this is test</a></h2>
+            <h2><a href={`${url?url:"#"}`} target="_blank" rel="noreferrer">{title}</a></h2>
         </div>
         <div className="w-full flex flex-row justify-start gap-2 items-start">
-          <p>posted by rudhi</p>
-          <p>23/01/24</p>
-          <p>10:33:26 PM</p>
+          <p>{by}</p>
+          <p>{new Date(time * 1000).toLocaleString()}</p>
         </div>
     </div>
   )
