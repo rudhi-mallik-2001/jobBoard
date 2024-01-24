@@ -7,8 +7,7 @@ const JobCard = (job) => {
             <h2><a href={`${url?url:"#"}`} target="_blank" rel="noreferrer">{title}</a></h2>
         </div>
         <div className="w-full flex flex-row justify-start gap-2 items-start">
-          <p>{by}</p>
-          <p>{new Date(time * 1000).toLocaleString()}</p>
+          <p>{by} {new Date(time * 1000).toLocaleString()}</p>
         </div>
     </div>
   )
